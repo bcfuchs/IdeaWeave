@@ -34,7 +34,7 @@
       </p>
 <![endif]-->
 
-<material-sidenav class="material-sidenav-right material-whiteframe-z2" component-id="right" layout="vertical" >
+<md-sidenav class="material-sidenav-right" md-component-id="right" layout="vertical">
     <div ng-controller="RightNavCtrl">
         <material-toolbar layout="horizontal">
             <div class="material-toolbar-tools">
@@ -48,7 +48,7 @@
         <div ng-include="sideNavTemplateUrl" flex layout layout-fill>
         </div>
     </div>
-</material-sidenav>
+</md-sidenav>
 
 <material-toolbar ng-controller="HeaderCtrl" class="main-header">
     <div class="material-toolbar-tools">
@@ -128,6 +128,7 @@
 <script src="vendors/satellizer/satellizer.js"></script>
 <script src="vendors/angular-timeago/src/timeAgo.js"></script>
 <script src="vendors/underscore/underscore.js"></script>
+<script src="vendors/angular-aria/angular-aria.js"></script>
 
 <script src="env/config.js"></script>
 

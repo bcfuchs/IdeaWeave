@@ -29,7 +29,7 @@ angular.module('cri.workspace',[])
             Pdf.fromHtml();
         };
     }])
-    .controller('WorkspaceCtrl',['$scope','notes','$materialDialog','NoteLab','Challenge','$materialSidenav','project',function($scope,notes,$materialDialog,NoteLab,Challenge,$materialSidenav,project){
+    .controller('WorkspaceCtrl',['$scope','notes','$materialDialog','NoteLab','Challenge','$mdSidenav','project',function($scope,notes,$materialDialog,NoteLab,Challenge,$mdSidenav,project){
         if(notes.length){
             $scope.notes = notes;
         }else{
@@ -48,7 +48,7 @@ angular.module('cri.workspace',[])
         };
 
         $scope.$on('showWorkspace',function(){
-            leftNav = $materialSidenav('left');
+            leftNav = $mdSidenav('left');
             leftNav.toggle();
         });
 

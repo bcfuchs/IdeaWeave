@@ -61,8 +61,8 @@ angular.module('cri', [
         $scope.closeToast = function() {
             $hideToast();
         };
-    }]).controller('RightNavCtrl',function($scope,$materialSidenav,$auth,Notification){
-        var rightNav = $materialSidenav('right');
+    }]).controller('RightNavCtrl',function($scope,$mdSidenav,$auth,Notification){
+        var rightNav = $mdSidenav('right');
         $scope.$on('toggleRight',function(e,type){
             switch(type){
                 case 'login':
@@ -90,7 +90,7 @@ angular.module('cri', [
             rightNav.toggle();
             Notification.display('You have been logged out');
         }
-    }).controller('LeftNavCtrl',function($scope,$materialSidenav,$state,Profile,Tag,Recommendation,$q,Project,Challenge){
+    }).controller('LeftNavCtrl',function($scope,$mdSidenav,$state,Profile,Tag,Recommendation,$q,Project,Challenge){
         function getRecomendation(id){
             var defered = $q.defer();
             if(!$scope.currentUser) return defered.promise;
@@ -210,7 +210,7 @@ angular.module('cri', [
             }
         });
 //
-        var leftNav = $materialSidenav('left');
+        var leftNav = $mdSidenav('left');
         $scope.$on('toggleLeft',function(e){
             leftNav.toggle();
         });

@@ -1,11 +1,11 @@
 angular.module('cri.common')
-.factory('Notification',['$window','$materialToast',function($window,$materialToast){
+.factory('Notification',['$window','$mdToast',function($window,$mdToast){
         var service = {
             authorize : function(){
 
             },
             display : function(message){
-                $materialToast({
+                $mdToast.show({
                     controller: ['$scope','$hideToast',function($scope, $hideToast) {
                         $scope.message = message;
                         $scope.closeToast = function() {
@@ -18,7 +18,7 @@ angular.module('cri.common')
                 });
             },
             displaySocketNotif : function(notif){
-                $materialToast({
+                $mdToast.show({
                     controller: ['$scope','$hideToast','$q','NoteLab',function($scope, $hideToast,$q,NoteLab) {
                         $scope.notif = notif;
 

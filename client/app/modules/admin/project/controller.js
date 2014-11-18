@@ -11,7 +11,7 @@ angular.module('cri.admin.project',[])
             console.log(err);
         });
     }])
-    .controller('ProjectEditCtrl',['$scope','$stateParams','Project','$state','Notification','Config','$materialDialog','$materialSidenav','Gmap',function ($scope,$stateParams,Project,$state,Notification,Config,$materialDialog,$materialSidenav,Gmap) {
+    .controller('ProjectEditCtrl',['$scope','$stateParams','Project','$state','Notification','Config','$materialDialog','$mdSidenav','Gmap',function ($scope,$stateParams,Project,$state,Notification,Config,$materialDialog,$mdSidenav,Gmap) {
 
         var leftNav;
         $scope.toggle = function(){
@@ -19,7 +19,7 @@ angular.module('cri.admin.project',[])
         };
 
         $scope.$on('showAdmin',function(){
-            leftNav = $materialSidenav('left');
+            leftNav = $mdSidenav('left');
             leftNav.toggle();
         });
 

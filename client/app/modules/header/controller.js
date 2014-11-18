@@ -1,6 +1,6 @@
 angular.module('cri.header',[])
 
-    .controller('HeaderCtrl',['$scope','$state','Notification','SearchBar','$auth','$rootScope',function($scope,$state,Notification,SearchBar,$materialSidenav,$rootScope){
+    .controller('HeaderCtrl',['$scope','$state','Notification','SearchBar','$auth','$rootScope',function($scope,$state,Notification,SearchBar,$mdSidenav,$rootScope){
 
         $scope.sideNavToggle = function(event){
             $rootScope.$broadcast(event);
